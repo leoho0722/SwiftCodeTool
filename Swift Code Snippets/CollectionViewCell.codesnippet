@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>collectionViewCellCodeSnippets</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+
+class &lt;# CollectionView Cell Name #&gt;CollectionViewCell: UICollectionViewCell {
+    
+    // MARK: - IBOutlet
+    
+    
+    
+    // MARK: - Variables
+    
+    static let identifier = &lt;# CollectionView Cell Identifier #&gt;
+    
+    // MARK: - LifeCycle
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
+
+    // MARK: - UI Settings
+    
+    func setInit() {
+        
+    }
+    
+    // MARK: - IBAction
+    
+}
+
+// MARK: - Extensions
+
+
+
+// MARK: - Protocol
+
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4D8F40E4-46C0-4893-9805-170CB1E97619</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>CollectionView Cell Code Snippets</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
