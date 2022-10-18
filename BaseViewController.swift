@@ -91,6 +91,32 @@ class BaseViewController: UIViewController {
         coordinator.animate(alongsideTransition: nil) { _ in completion() }
     }
     
+    /// NavigationController.pushViewController 跳頁時刪掉舊的畫面 (不帶 Closure)
+    /// - Parameters:
+    ///   - currentVC: 現在的 UIViewController
+    ///   - nextVC: 要跳頁到的 UIViewController
+    ///   - animated: 是否要換頁動畫
+    public func pushViewController(currentVC: UIViewController,
+                                   nextVC: UIViewController,
+                                   animated: Bool) {
+        navigationController?.pushViewController(nextVC, animated: true)
+
+        guard self.navigationController != nil && self.navigationController?.viewControllers != nil else {
+            return
+        }
+        
+        // 刪除上一個畫面
+        let arrayVC = NSMutableArray(array: (self.navigationController?.viewControllers)!)
+        for vc in arrayVC {
+            if (vc as! UIViewController) == currentVC  {
+                arrayVC.remove(vc)
+                break
+            }
+        }
+        
+        self.navigationController?.viewControllers = arrayVC as! [UIViewController]
+    }
+    
     /// NavigationController.pushViewController 跳頁時刪掉舊的畫面 (帶 Closure)
     /// - Parameters:
     ///   - currentVC: 現在的 UIViewController
